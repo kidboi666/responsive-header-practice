@@ -1,0 +1,128 @@
+body,ul,ol,li {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background: rgb(7, 56, 85);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  list-style: none;
+  font-size: 30px;
+  padding-left: 30px;
+}
+.logo li img {
+  width: 30px;
+  margin-right: 10px;
+}
+.menu {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.menu li {
+
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  transition: 50ms;
+}
+.menu li:hover {
+  background: rgb(209, 123, 62);
+}
+.sns {
+  display: flex;
+  padding-right: 30px;
+}
+.sns .img1 {
+  background-image: url(./image/1x/Asset\ 2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.sns .img2 {
+  background-image: url(./image/1x/Asset\ 3.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.menu_button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 100%;
+    padding: 20px 0;
+  }
+  .wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+  .menu_wrapper {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .menu_wrapper.active,
+  .sns.active {
+    display: flex;
+  }
+  .menu {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .sns {
+    display: none;
+    padding: 0;
+  }
+  .menu_button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .menu_button li {
+    list-style: none;
+  }
+  .menu_button .bar1,
+  .menu_button .bar2,
+  .menu_button .bar3 {
+    width: 20px;
+    border-top: 2px solid rgb(161, 123, 40);
+    margin-bottom: 5px;
+  }
+
+}
